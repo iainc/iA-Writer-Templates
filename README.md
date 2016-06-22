@@ -66,7 +66,9 @@ Template pages and other properties are defined in `Info.plist`. We recommend st
 
 ### Content
 
-iA Writer applies content to HTML using JavaScript. It will replace `innerHTML` on elements with several predefined `data` attributes. 
+iA Writer applies content to HTML using JavaScript. It replaces `innerHTML` on elements with several predefined `data` attributes. 
+
+For example, `<span data-date></span>` becomes `<span data-date>June 22, 2016</span>` when a page is loaded for export.
 
 iA Writer dispatches an `ia-writer-change` event to elements when it updates them with new content.
 
