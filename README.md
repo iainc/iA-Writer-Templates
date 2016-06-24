@@ -80,7 +80,11 @@ The document page lays out the text from the editor in Preview, printed document
 
 | Attribute | Description |
 |:--|:--|
-| `data-document` | Document text as HTML. iA Writer uses MultiMarkdown (with a few additions) to convert Markdown to HTML. |
+| `data-document` | Document text as HTML. |
+
+iA Writer uses [MultiMarkdown][MMD] (with a few additions) to convert Markdown to HTML. [Markup.txt](Markup.txt) contains some of the most commonly used markup in iA Writer. [Markup.html](Markup.html) is the resulting HTML for `data-document`.
+
+[MMD]: https://github.com/fletcher/MultiMarkdown-5
 
 #### Title Page, Header and Footer
 

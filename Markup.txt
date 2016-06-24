@@ -1,0 +1,35 @@
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+![Image](Info.png)
+
+Paragraph with **strong**, *emphasis*, ~~strikethrough~~, `code`, a footnote[^Footnote content.], and a [link](htpp://ia.net/writer).
+
+- List item with [table reference][table-identifier]
+- [ ] Task list item
+
+---
+
+1. Ordered list item
+1. [x] Ordered task list item
+
+> Block quote
+
+```swift
+print("Hello World!")
+```
+
+|              | Grouping                    ||  
+| First Column | Second Column | Third Column |  
+| ------------ | :-----------: | -----------: |  
+| Cell         | *Long Cell*                 ||  
+| Cell         | **Cell**      | Cell         |
+[Table Caption][table-identifier]
+
+Citation from a book.[p. 42][#book]
+
+[#book]: John Doe. *A Totally Fake Book*. Vanity Press, 2006.
