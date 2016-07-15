@@ -7,7 +7,7 @@
 
 ![Image](Info.png)
 
-Paragraph with **strong**, *emphasis*, ~~strikethrough~~, `code`, a footnote[^Footnote content.], and a [link](htpp://ia.net/writer).
+Paragraph with **strong**, *emphasis*, ~~strikethrough~~, `code`, a footnote[^Footnote content.], and a [link](http://ia.net/writer).
 
 - List item with [table reference][table-identifier]
 - [ ] Task list item
