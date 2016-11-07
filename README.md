@@ -128,7 +128,7 @@ To fully reload the currently visible template in Preview on macOS, press <kbd>S
 To enable Web Inspector in Preview, paste the following command into Terminal.
 
 ```
-defaults write -app "iA Writer" WebKitDeveloperExtras -bool true
+defaults write pro.writer.mac WebKitDeveloperExtras -bool true
 ```
 
 #### Vertical Margins
