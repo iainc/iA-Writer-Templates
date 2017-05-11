@@ -40,11 +40,17 @@
           // Minimalistic
           extensions: ["AMSmath.js", "AMSsymbols.js"],
         },
+
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+        },
+
+        MathMenu: {
+            showRenderer: false,
+        }
       });
     </script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-    </script>
+    <script type="text/javascript" src="MathJax/MathJax.js"></script>
 
     <!-- Javascript hooks to catch updates of the Markdown text
          We postpone processing to 1/2 second later, so that, in effect,
