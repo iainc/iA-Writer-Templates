@@ -3,6 +3,62 @@
 <head>
 	<meta charset="UTF-8">
   <link rel="stylesheet" media="all" href="github.css">
+    <!-- Mathjax -->
+    <script
+      type="text/x-mathjax-config"
+    >
+      MathJax.Hub.Config({
+        // hide message appearing in the lower left corner
+        messageStyle: "none",
+
+        // we typeset on load event
+        skipStartupTypeset: false,
+
+        // minimalistic: we only need TeX and the Mathjax menu is useful
+        extensions: ["tex2jax.js", "MathMenu.js"],
+
+        // SVG is the fastest
+        jax: ["input/TeX", "output/HTML-CSS"],
+
+        // IA Writer markdown processor transforms $...$ into \(...\),
+        // and $$...$$ into \[...\], so we just need those.
+        tex2jax: {
+          inlineMath: [["\\(", "\\)"]],
+          displayMath: [["\\[", "\\]"]],
+          preview: "none",
+        },
+
+        TeX: {
+          // Minimalistic
+          extensions: ["AMSmath.js", "AMSsymbols.js"],
+        },
+      });
+    </script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+    </script>
+
+    <!-- Javascript hooks to catch updates of the Markdown text
+         We postpone processing to 1/2 second later, so that, in effect,
+         no processing is performed as long as one types text, but that
+         math and code block are rendered after a short pause in typing.
+    -->
+    <script
+      type="text/javascript"
+    >
+      window.addEventListener('load', function () {
+        var delay = 500; // ms
+        var math_timeout = null;
+        var code_timeout = null;
+        document.body.addEventListener('ia-writer-change', function () {
+          clearTimeout(math_timeout);
+          math_timeout = setTimeout(function() {
+            var maths = document.body.getElementsByClassName('math');
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, maths]);
+          }, delay);
+        });
+      });
+    </script>
 </head>
-<body class="markdown-body" data-document>&nbsp;</body>
+    <body class="markdown-body" data-document>&nbsp;</body>
 </html>
