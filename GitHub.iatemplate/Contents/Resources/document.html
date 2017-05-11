@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
   <link rel="stylesheet" media="all" href="github.css">
+
+    <!-- highlightjs javascript and CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+    <link rel="stylesheet" href="highlightjs_tweaks.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+
     <!-- Mathjax -->
     <script
       type="text/x-mathjax-config"
@@ -57,6 +64,15 @@
             MathJax.Hub.Queue(["Typeset", MathJax.Hub, maths]);
           }, delay);
         });
+        document.body.addEventListener('ia-writer-change', function () {
+          clearTimeout(code_timeout);
+          code_timeout = setTimeout(function() {
+            var codes = document.body.querySelectorAll('code');
+            Array.prototype.forEach.call(codes, function(x) {
+              hljs.highlightBlock(x);
+            })
+          }, delay);
+        })
       });
     </script>
 </head>
