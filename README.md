@@ -159,7 +159,7 @@ iA Writer supports system-wide font size on iOS. Users can adjust the font size 
 Note that some users may enable accessibility sizes in Settings > General > Accessibility > Larger Text.
 
 | Class |
-|:--|:--|
+|:--|
 | `content-size-accessibility-m` |
 | `content-size-accessibility-l` |
 | `content-size-accessibility-xl` |
