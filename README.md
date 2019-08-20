@@ -79,7 +79,7 @@ iA Writer dispatches an `ia-writer-change` event to elements when it updates the
 
 #### Document
 
-The document page lays out the text from the editor in Preview, printed documents, and PDFs. The document page supports one attribute.
+The document page lays out the text from the editor in Preview, printed documents, and PDFs.
 
 | Attribute | Description |
 |:--|:--|
@@ -91,13 +91,10 @@ iA Writer uses [MultiMarkdown][MMD] (with a few additions) to convert Markdown t
 
 #### Title Page, Header and Footer
 
-Title page, header, and footer are used only in in printed documents and PDFs. They support several attributes.
+Title page, header, and footer are used only in in printed documents and PDFs.
 
 | Attribute | Description |
 |:--|:--|
-| `data-title` | Document title, taken from document file name. |
-| `data-author` | Document author, if specified in Preferences. |
-| `data-date` | Current date. You can specify date format<sup>1</sup> in the attribute value: `data-date="MMMM yyyy"`. Date format patterns are described in [Unicode Technical Standard #35][Date Formats]. |
 | `data-page-count` | Total page count of the exported document. |
 | `data-page-number` | Current page number.<sup>2</sup> |
 
@@ -107,7 +104,13 @@ Title page, header, and footer are used only in in printed documents and PDFs. T
 [Date Formats]: http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
 [Locale Adjustments]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/#//apple_ref/occ/clm/NSDateFormatter/dateFormatFromTemplate:options:locale:
 
+#### All Pages
 
+| Attribute | Description |
+|:--|:--|
+| `data-title` | Document title, taken from document file name. |
+| `data-author` | Document author, if specified in Preferences. |
+| `data-date` | Current date. You can specify date format<sup>1</sup> in the attribute value: `data-date="MMMM yyyy"`. Date format patterns are described in [Unicode Technical Standard #35][Date Formats]. |
 
 ### Preview
 
