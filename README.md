@@ -60,6 +60,7 @@ Template pages and other properties are defined in `Info.plist`. We recommend st
 | `IATemplateAuthorURL` | String | Recommended | A link to template’s author. |
 | `IATemplateSuportsSmartTables` | Boolean | Optional | Whether to process Smart Tables. Defaults to YES if absent. |
 | `IATemplateSupportsMath` | Boolean | Optional | Whether to process TeX math expressions into MathML. Defaults to YES if absent. |
+| `IATemplateTitleUsesHeaderAndFooterHeight` | Boolean | Optional | When set to NO changes header and footer height on title page to 0. Defaults to YES if absent. |
 
 1. iA Writer uses the bundle identifier to associate templates with documents. Each template must have a unique identifier. The identifier must contain only alphanumeric (A-Z, a-z, 0-9), hyphen (-), and period (.) characters. The string should be in reverse-DNS format. For example, if your company’s domain is `example.com` you could assign the string `com.example.template` as the bundle identifier.
 2. HTML file name, without path extension. The actual files themselves must have an `html` extension.
