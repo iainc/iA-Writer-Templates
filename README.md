@@ -137,6 +137,8 @@ To enable Web Inspector in Preview, paste the following command into Terminal.
 defaults write pro.writer.mac WebKitDeveloperExtras -bool true
 ```
 
+On Windows, you can enable the Chromium inspector by using <kbd>Ctrl</kbd> <kbd>J</kbd>.
+
 #### Vertical Margins
 
 Avoid vertical margins and padding for the document page.
