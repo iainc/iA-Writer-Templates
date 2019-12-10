@@ -67,21 +67,14 @@ html {
   }
 }
 
-/* GitHub embeds input into the first paragraph, iA Writer doesn’t */
-.markdown-body .task-list-item-checkbox {
-  float: left; /* Removes from flow in case of paragraph list items */
-  width: 1.6rem; /* Same as p line-height (changing width/height affects svg size) */
-  height: 1.6rem; /* Same as width */
-  margin: 0 0 0 -1.6rem; /* 0s to overwrite user agent styles */
-  border: none; /* Otherwise iPhone draws a border */
-  font-size: 1rem; /* Required to overwrite user agent styles, set to same as p */
-  background-repeat: no-repeat;
-  background-position: 40% 40%; /* x=roughly align with bullets and between ordinal and text, y=4px down to roughly align to baseline. */
-  background-size: 50% 50%; /* Desired size 12px / 21px line-height for Preview */
-  -webkit-print-color-adjust: exact; /* Prevents from hiding when printed */
-  opacity: 1.0; /* Otherwise they are 0.4 on iPhone, where it applies disabled effect even with above */
+/* Fix for paragraph list items. GitHub embeds input into the first paragraph, iA Writer doesn’t. */
+.markdown-body .task-list-item {
+  clear: left;
 }
-
+.markdown-body .task-list-item-checkbox {
+  float: left; /* takes out of flow */
+  height: 1.5rem; /* same as line height */
+}
 
 /* GitHub doesn't process figures and images aren't given padding */
 .markdown-body figure {
