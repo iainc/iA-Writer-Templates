@@ -96,10 +96,9 @@ Title page, header, and footer are used only in in printed documents and PDFs.
 | Attribute | Description |
 |:--|:--|
 | `data-page-count` | Total page count of the exported document. |
-| `data-page-number` | Current page number.<sup>2</sup> |
+| `data-page-number` | Current page number.<sup>1</sup> |
 
-1. `data-date` output may not contain exactly those components given in the attribute value, but may—for example—have locale-specific [adjustments][Locale Adjustments] applied: `yMMMMd` may become `MMMM d, y` in the US, and `d MMMM y` in the UK.
-2. `data-page-number` is not available in title pages. They do not have a page number to keep numbering the same whether or not you include the title page during export.
+1. `data-page-number` is not available in title pages. They do not have a page number to keep numbering the same whether or not you include the title page during export.
 
 [Date Formats]: http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
 [Locale Adjustments]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/#//apple_ref/occ/clm/NSDateFormatter/dateFormatFromTemplate:options:locale:
@@ -111,6 +110,8 @@ Title page, header, and footer are used only in in printed documents and PDFs.
 | `data-title` | Document title, taken from document file name. |
 | `data-author` | Document author, if specified in Preferences. |
 | `data-date` | Current date. You can specify date format<sup>1</sup> in the attribute value: `data-date="MMMM yyyy"`. Date format patterns are described in [Unicode Technical Standard #35][Date Formats]. |
+
+1. `data-date` output may not contain exactly those components given in the attribute value, but may—for example—have locale-specific [adjustments][Locale Adjustments] applied: `yMMMMd` may become `MMMM d, y` in the US, and `d MMMM y` in the UK.
 
 ### Preview
 
