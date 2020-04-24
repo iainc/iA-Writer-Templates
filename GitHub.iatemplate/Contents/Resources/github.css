@@ -87,3 +87,12 @@ html {
 .markdown-body figcaption {
 	margin-bottom: 16px; /* same as between paragraphs */
 }
+
+.markdown-body img {
+  height: auto;
+}
+
+/* give elements on new pages the same top margin as first element of document */
+.markdown-body .page-break + * {
+  margin-top: 0;
+}
