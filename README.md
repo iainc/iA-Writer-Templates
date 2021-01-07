@@ -109,7 +109,7 @@ Title page, header, and footer are used only in in printed documents and PDFs.
 |:--|:--|
 | `data-title` | Document title, taken from document file name. |
 | `data-author` | Document author, if specified in Preferences. |
-| `data-date` | Current date. You can specify date format<sup>1</sup> in the attribute value: `data-date="MMMM yyyy"`. Date format patterns are described in [Unicode Technical Standard #35][Date Formats]. |
+| `data-date` | Current date. You can specify date format<sup>1</sup> in the attribute value: `data-date="MMMM yyyy"`. Date format patterns are described in [Unicode Technical Standard #35][Date Formats]. On Windows, [Microsoft standards](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) are used. |
 
 1. `data-date` output may not contain exactly those components given in the attribute value, but may—for example—have locale-specific [adjustments][Locale Adjustments] applied: `yMMMMd` may become `MMMM d, y` in the US, and `d MMMM y` in the UK.
 
