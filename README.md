@@ -35,6 +35,10 @@ iOS supports adding template bundles, as well as ZIP archives, with one template
 - Send via AirDrop
 - “Copy to iA Writer” from Safari, Mail, iCloud Drive, or another sync service
 
+##### Windows (v. 1.2+)
+
+Download the template then, from iA Writer's menu choose: File → Install Template → Select 'TemplateName.iatemplate.zip' file. 
+
 ### HTML Files
 
 iA Writer templates use separate HTML files for laying out the title page, document text, headers, and footers.
