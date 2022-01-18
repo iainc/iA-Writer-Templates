@@ -62,7 +62,7 @@ Template pages and other properties are defined in `Info.plist`. We recommend st
 | `IATemplateDescription` | String | Recommended | A sentence that describes your template. |
 | `IATemplateAuthor` | String | Recommended | A person (or a company) who created the template. |
 | `IATemplateAuthorURL` | String | Recommended | A link to template’s author. |
-| `IATemplateSuportsSmartTables` | Boolean | Optional | Whether to process Smart Tables. Defaults to YES if absent. |
+| `IATemplateSupportsSmartTables` | Boolean | Optional | Whether to process Smart Tables. Defaults to YES if absent. |
 | `IATemplateSupportsMath` | Boolean | Optional | Whether to process TeX math expressions into MathML. Defaults to YES if absent. |
 | `IATemplateTitleUsesHeaderAndFooterHeight` | Boolean | Optional | When set to NO changes header and footer height on title page to 0. Defaults to YES if absent. |
 
