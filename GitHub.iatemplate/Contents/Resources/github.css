@@ -1,15 +1,9 @@
 /* github-markdown, github-markdown-mobile are extracted using https://github.com/sindresorhus/generate-github-markdown-css */
 /* .pl styles have been removed, because they refer to prettylights syntax highlighter https://github.com/primer/github-syntax-theme-generator */
 
-@import 'github-markdown.css' screen and (min-width: 520px), print;
+@import 'github-markdown-light.css' screen, print;
 
-@import 'github-markdown-mobile.css' screen and (max-width: 520px);
-
-@import 'github-markdown-night-mode.css' screen;
-
-html {
-  background-color: white;
-}
+@import 'github-markdown-dark.css' screen;
 
 .markdown-body {
   padding-top: 0;
@@ -36,17 +30,30 @@ html {
 @media screen {
   .markdown-body {
     margin: 0 auto;
-    max-width: calc(980px - 90px);
+    max-width: 830px;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 420px) {
   .markdown-body {
     --horizontal-padding: 15px;
   }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 420px) and (max-width: 500px) {
+  .markdown-body {
+    --horizontal-padding: 25px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 550px) {
+  .markdown-body {
+    --horizontal-padding: 35px;
+  }
+}
+
+
+@media screen and (min-width: 550px) {
   .markdown-body {
     --horizontal-padding: 45px;
   }
@@ -62,10 +69,51 @@ html {
   .markdown-body {
     --horizontal-padding: 75px;
   }
+  .markdown-body p {
+    widows: 2;      /* avoid single lines at... */
+    orphans: 2;     /* ...begin and end of page */
+  }
   .markdown-body pre code {
     white-space: pre-wrap;
   }
-}
+
+  /* void page breaks after headlines */
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    /* this should be simple but due to WebKit bug https://bugs.webkit.org/show_bug.cgi?id=5097 it isn't: 
+         page-break-after: avoid;   /* old syntax, not working in webkit 
+         break-after: avoid-page;   /* new syntax, not implemented in webkit 
+       instead, increase the calculated height of headlines by using an invisible element and forbid breaks within: */
+    page-break-inside: avoid;    
+  }  
+  .markdown-body h1::after,
+  .markdown-body h2::after,
+  .markdown-body h3::after,
+  .markdown-body h4::after,
+  .markdown-body h5::after,
+  .markdown-body h6::after {
+    content: "";
+    display: block;
+    height: 50px;
+    margin-bottom: -50px;  
+  }
+  /* github-markdown.css does define bottom padding and border for h1 / h2 which conflicts with this hack 
+     remove these and define them top of the workaround instead */
+  .markdown-body h1,
+  .markdown-body h2 {
+    padding-bottom: unset;
+    border-bottom: unset;
+  }
+  .markdown-body h1::after,
+  .markdown-body h2::after {
+    margin-top: 0.3em;
+    border-top: 1px solid #eaecef;
+  }
+}  
 
 /* Fix for paragraph list items. GitHub embeds input into the first paragraph, iA Writer doesn’t. */
 .markdown-body .task-list-item {
@@ -86,13 +134,4 @@ html {
 
 .markdown-body figcaption {
 	margin-bottom: 16px; /* same as between paragraphs */
-}
-
-.markdown-body img {
-  height: auto;
-}
-
-/* give elements on new pages the same top margin as first element of document */
-.markdown-body .page-break + * {
-  margin-top: 0;
 }
