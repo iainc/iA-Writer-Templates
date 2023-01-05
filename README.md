@@ -57,8 +57,8 @@ Template pages and other properties are defined in `Info.plist`. We recommend st
 | `IATemplateTitleFile` | String<sup>2</sup> | Optional | Lays out a title page on export. |
 | `IATemplateHeaderFile` | String<sup>2</sup> | Optional | Draws at the top of each document page on export. |
 | `IATemplateFooterFile` | String<sup>2</sup> | Optional | Draws at the bottom of each document page on export. |
-| `IATemplateHeaderHeight` | Number | Optional | Header height, in CSS pixels (≤400). |
-| `IATemplateFooterHeight` | Number | Optional | Footer height, in CSS pixels (≤400). |
+| `IATemplateHeaderHeight` | Number | Optional | Header height, in CSS points (≤400). |
+| `IATemplateFooterHeight` | Number | Optional | Footer height, in CSS points (≤400). |
 | `IATemplateDescription` | String | Recommended | A sentence that describes your template. |
 | `IATemplateAuthor` | String | Recommended | A person (or a company) who created the template. |
 | `IATemplateAuthorURL` | String | Recommended | A link to template’s author. |
